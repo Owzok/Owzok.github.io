@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
         <link rel="stylesheet" href="./courses.css">
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
         <div id="omt" class="open-menu-t"></div>
@@ -25,32 +26,55 @@
         </div>
           <div class="loading-anim">
         </div>
+        <div class="selector">
+            <div class="category-title active" id="all">
+                <li>All</li>
+                <span><i class="fas fa-border-all"></i></span>
+            </div>
+            <div class="category-title" id="cs">
+                <li>CS Faculty</li>
+                <span><i class="fas fa-laptop"></i></span>
+            </div>
+            <div class="category-title" id="ds">
+                <li>Data Science</li>
+                <span><i class="fas fa-database"></i></span>
+            </div>
+            <div class="category-title" id="math">
+                <li>Mathematics</li>
+                <span><i class="fas fa-calculator"></i></span>
+            </div>
+        </div>
         <section class="main">
             <div class="left-container"></div>
             <h1>Major-related<br> <span>Courses</span></h1>
             <p>Here there is a list of all of my computer and data science related courses. I will also be minoring in Mathematics so those completed classes are included as well. <br><span>My expected graduation date is July 2025.</span></p>
             
+
             <div class="courses">
                 <ul>
-                    <li>CS1111 - Programming I <span>( Python )</span></li>
-                    <li>CS1112 - Programming II <span>( C++ )</span></li>
-                    <li>CS2013 - Programming III <span>( C++ )</span></li>
-                    <li>CS2023 - Data Structures & Algorithms <span>( C++ )</span></li>
-                    <li>CS2041 - Databases 1 <span>( SQL )</span></li>
-                    <li>CS2031 - Web Development <span>( Flask & Vue.js )</span></li>
-                    <li>CS2032 - Cloud Computing <span>( AWS, Docker )</span></li>
-                    <li>CS1021 - Discrete Maths I</li>
-                    <li>CS1022 - Discrete Maths II</li>
-                    <li>DS1000 - Intro to Data Science <span>( Python, R )</span></li>
-                    <li>DS2011 - Optimization <span> ( Python, Jupyter )</span></li>
-                    <li>CC1101 - Calculus I</li>
-                    <li>CC1104 - Calculus II</li>
-                    <li>CC2101 - Differential Equations</li>
-                    <li>CC2104 - Numeric Methods <span> ( Matlab )</span></li>
-                    <li>CC1123 - Optics & Waves</li>
-                    <li>CC1103 - Linear Algebra <span>( Matlab )</span></li>
-                    <li>CC1105 - Probabilities & Statistics I <span>( R )</span></li>
-                    <li>CC2102 - Probabilities & Statistics II <span>( R )</span></li>
+                    <li class="all cs">CS1111 - Programming I <span>( Python )</span></li>
+                    <li class="all cs">CS1112 - Programming II <span>( C++ )</span></li>
+                    <li class="all cs">CS2013 - Programming III <span>( C++ )</span></li>
+                    <li class="all cs">CS2023 - Data Structures & Algorithms <span>( C++ )</span></li>
+                    <li class="all cs">CS2041 - Databases I <span>( SQL )</span></li>
+                    <li class="all cs">CS2042 - Databases II <span>( C++, Python )</span></li>
+                    <li class="all cs">CS2031 - Web Development <span>( Flask & Vue.js )</span></li>
+                    <li class="all cs">CS2032 - Cloud Computing <span>( AWS, Docker )</span></li>
+                    <li class="all cs">CS1021 - Discrete Maths I</li>
+                    <li class="all cs">CS1022 - Discrete Maths II</li>
+                    <li class="all ds">DS1000 - Intro to Data Science <span>( Python, R )</span></li>
+                    <li class="all ds">DS2011 - Optimization <span> ( Python, Jupyter )</span></li>
+                    <li class="all ds">CC1105 - Probabilities & Statistics I <span>( R )</span></li>
+                    <li class="all ds">CC2102 - Probabilities & Statistics II <span>( R )</span></li>
+                    <li class="all ds">DS3012 - Stochastic Processes <span>( Python )</span></li>
+                    <li class="all ds">DS3021 - Data Analysis <span>( Python )</span></li>
+                    <li class="all math">CC1101 - Calculus I</li>
+                    <li class="all math">CC1104 - Calculus II</li>
+                    <li class="all math">CC2101 - Differential Equations</li>
+                    <li class="all math">CC2104 - Numeric Methods <span> ( Matlab )</span></li>
+                    <li class="all math">CC1123 - Optics & Waves</li>
+                    <li class="all math">CC1103 - Linear Algebra <span>( Matlab )</span></li>
+
                 </ul>
             </div>
         </section>
@@ -87,5 +111,6 @@
             </div>
         </section>
         <script src="./script.js"></script>
+        <script src="courses.js"></script>
     </body>
 </html>

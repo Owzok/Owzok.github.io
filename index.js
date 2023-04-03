@@ -9,11 +9,21 @@ btnProjects.addEventListener('click', function () {
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 1500;
 
+function weeksBetween(d1, d2) {
+    return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
+}
+
+function yearsBetween(d1, d2) {
+    return Math.round((d2 - d1) / (7 * 24 * 60 * 60 * 1000));
+}
+
+const weeksatr = document.querySelector("#weeks").setAttribute("data-val",weeksBetween(new Date(), new Date(2025,07,01)));
+const yearsatr = document.querySelector("#weeks").setAttribute("data-val",weeksBetween(new Date(), new Date(2025,07,01)));
+
 setTimeout(function(){
     valueDisplays.forEach((valueDisplay) => {
         let startValue = 0;
         let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-        console.log(endValue);
         let duration = Math.floor(interval/endValue);
         let counter = setInterval(function() {
             startValue += 1;
