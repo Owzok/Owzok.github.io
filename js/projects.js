@@ -1,57 +1,62 @@
-$(document).ready(function(){
+const all = document.querySelector("#c-all"); 
+const webdev = document.querySelector("#c-webdev"); 
+const cpp = document.querySelector("#c-cpp"); 
+const py = document.querySelector("#c-py"); 
+const design = document.querySelector("#c-wdes"); 
+const other = document.querySelector("#c-other"); 
 
-   var $sm = 480;
-   var $md = 768;
+const transitionDiv = document.getElementById("bmt")
 
-   function resizeThis() {
-      $imgH = $('.middle img').width();
-      if ($(window).width() >= $sm) {
-         $('.left,.right,.section').css('height', $imgH);
-      } else {
-         $('.left,.right,.section').css('height', 'auto');
-      }
-   }
-
-   resizeThis();
-
-   $(window).resize(function(){
-      resizeThis();
-   });
-
-   $(window).scroll(function() {
-      $('.section').each(function(){
-         var $elementPos = $(this).offset().top;
-         var $scrollPos = $(window).scrollTop();
-
-         var $sectionH = $(this).height();
-         var $h = $(window).height();
-         var $sectionVert = (($h/2)-($sectionH/4));
-
-
-         if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
-            $(this).addClass('animate');
-         } else {
-            $(this).removeClass('animate');
-         }
-      });
-   });
-
-   $('.btn-primary').click(function(){
-      alert('I lied');
-   });
+all.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+         goCourses();
+   }, 1500) 
 });
 
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+webdev.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+       goWeb();
+   }, 1500) 
 });
+
+
+cpp.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+       goCpp();
+   }, 1500) 
+});
+
+
+py.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+       goPy();
+   }, 1500) 
+});
+
+
+design.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+       goWdes();
+   }, 1500) 
+});
+
+
+other.addEventListener('click', function () {
+   transitionDiv.className = 'black-menu-trans';
+   setTimeout(function(){
+       goOth();
+   }, 1500) 
+});
+
+
+function goAll(){ window.location.href = "projects.html"; }
+function goWeb(){ window.location.href = "projects_webdev.html"; }
+function goCpp(){ window.location.href = "projects_cpp.html"; }
+function goPy(){ window.location.href = "projects_py.html"; }
+function goWdes(){ window.location.href = "projects_design.html"; }
+function goOth(){ window.location.href = "projects_others.html"; }

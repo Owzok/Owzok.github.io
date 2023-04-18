@@ -58,6 +58,11 @@ li{
   width: 150px;
 }
 
+a{
+  list-style: none;
+  color: black;
+}
+
 .gallery{
   display: flex;
   flex-wrap: wrap;
