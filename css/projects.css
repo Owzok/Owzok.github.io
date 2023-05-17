@@ -8,34 +8,30 @@
   font-family: "Poppin", sans-serif;
   position: relative; }
 
-section{
-  justify-content: center;
-}
-
-body{
-  width: 100%;
-  height: 100%;
-}
 
 .title{
-  margin-top: -200px;
+  background-color: rgb(255,255,255,0.8);
+  width: 100%;
+  margin-top: -300px;
   position: absolute;
-  margin-left: 400px;
+  height: 300px;
 }
 
 h2{
-  font-family: 'Roboto', sans-serif;
   line-height: 1.02;
   letter-spacing: 1.2px;
   font-size: 80px;
   font-weight: 300;
+  margin-left: 180px;
+  margin-top: 70px;
 }
+
 h3{
-  font-family: 'Roboto', sans-serif;
   line-height: 1.02;
   letter-spacing: 1.2px;
   font-size: 80px;
   font-weight: 600;
+  margin-left: 180px;
 }
 
 ul{
@@ -43,24 +39,24 @@ ul{
   list-style: none;
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
   text-align: center;
+  height: 60px;
   margin-top: 300px;
 }
 
 li{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  float: left;
-  margin: 20px;
-  width: 150px;
-}
+  height: 20px;
 
-a{
-  list-style: none;
-  color: black;
+  cursor: pointer;
+  
+  float: left;
+  margin-left: 100px;
+  width: 130px;
 }
 
 .gallery{
@@ -93,6 +89,35 @@ a{
   object-fit: cover;
   margin-bottom: 4%;
   cursor: pointer;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.display{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.column img:hover {
+  opacity: 0.3;
+}
+
+.column img:hover {
+  opacity: 0.3;
+}
+
+.column img:hover .display {
+  opacity: 1;
+}
+
+.display:hover{
+  opacity: 1;
 }
 
 .column figure:first-child{
@@ -134,4 +159,5 @@ a{
   width: 100%;
   margin-left: -200%; /* Initial Hidden Position */
   background-color: white;
-  text-align: left; }
+  text-align: left; 
+}

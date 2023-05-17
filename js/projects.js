@@ -5,16 +5,18 @@ const py = document.querySelector("#c-py");
 const design = document.querySelector("#c-wdes"); 
 const other = document.querySelector("#c-other"); 
 
-const transitionDiv = document.getElementById("bmt")
+//const transitionDiv = document.getElementById("bmt")
+
+console.log(webdev)
 
 all.addEventListener('click', function () {
    transitionDiv.className = 'black-menu-trans';
    setTimeout(function(){
-         goCourses();
+         goAll();
    }, 1500) 
 });
 
-webdev.addEventListener('click', function () {
+webdev.addEventListener('mouseup', function () {
    transitionDiv.className = 'black-menu-trans';
    setTimeout(function(){
        goWeb();

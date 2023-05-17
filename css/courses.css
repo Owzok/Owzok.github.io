@@ -1,4 +1,3 @@
-<<<<<<< HEAD:css/courses.css
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 body{
     overflow-y: hidden;
@@ -12,8 +11,7 @@ body{
     height: 100%;
     width: 100%;
     z-index: 20; }
-.main{
-    margin-left: 4vw;}
+
 .left-container{
     position: fixed;
     width: 7vw;
@@ -41,17 +39,10 @@ body{
     visibility: hidden;
     width: 0;
     height: 0; }
-.courses{
-    position: absolute;
-    top: 0;
-    margin-top: 30px;
-    right: 0;
-    width: 45%;
-}
 
 @media (max-width:1400px){
     .courses{
-        margin-right: 20vw;
+        margin-right: 0vw;
     } }
 
 .content {
@@ -138,18 +129,6 @@ body{
     justify-content: flex-start;
 }
 
-.category-title{
-    display: flex;
-    justify-content: center;
-    background: grey;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-    transition: all 0.4 ease;
-    margin: 5px;
-    height: 42px;
-    width: 180px;
-}
 
 .category-title:hover{
     opacity: 0.7;
@@ -159,14 +138,18 @@ body{
     padding: 0 10px;
 }
 
+.category-title li a{
+    text-decoration: none;
+}
+
 .category-title span{
     color: #222;
 }
 
-.active{
+.active a{
     background-color: #03a9f4;
-=======
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+    color: #03a9f4;
+}
 
 .open-menu-t{
     position: fixed;
@@ -180,9 +163,10 @@ body{
     margin-left: 4vw;
     z-index: 1;}
 .left-container{
+    margin-top: 20px;
     position: fixed;
-    width: 7vw;
-    height: 80vh;}
+    width: 50vw;
+    height: 400px;}
 .main h1{
     position: relative;
     margin: 5vw 5vw 0 0;
@@ -208,15 +192,14 @@ body{
     height: 0; }
 .courses{
     position: absolute;
-    top: 0;
-    margin-top: 30px;
+    margin-top: 100px;
     right: 0;
-    width: 45%;
+    width: 49%;
 }
 
 @media (max-width:1400px){
     .courses{
-        margin-right: 20vw;
+        margin-right: 0vw;
     } }
 
 .content {
@@ -328,7 +311,6 @@ body{
     top: 50%;
     transform: translateY(-50%);
     font-size: 1vw;
-    padding: 0 10px;
 }
 
 .category-title span{
@@ -337,5 +319,4 @@ body{
 
 .active{
     background-color: #03a9f4;
->>>>>>> 129967b (courses):courses.css
 }
